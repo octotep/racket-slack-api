@@ -20,7 +20,7 @@
   (string->jsexpr (ws-recv rtm-conn)))
 
 ; Sends a jsexpr to the rtm websocket
-(define (rtm-send! rtm-conn)
+(define (rtm-send! rtm-conn json)
   (ws-send! rtm-conn (jsexpr->string json)))
 
 ; Closes a rtm websocket
